@@ -1,6 +1,5 @@
 # Projekt na przedmiot PRN 
 
-import numpy as np 
 import pandas as pd 
 from fuzzywuzzy import fuzz
 import time

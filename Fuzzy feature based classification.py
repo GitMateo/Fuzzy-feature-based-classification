@@ -22,7 +22,7 @@ print(check_output(["ls", "../input"]).decode("utf8"))
 # Poniżej podajemy ścieżkę do dataset
 data_frame = pd.read_csv('../input/train21/train1.csv')
 
-#Analiza pytań
+# Analiza pytań
 def extract_features(df):
     #Procentowe podobieństwo pytań
     df['fuzz_qratio'] = df.apply(lambda x: fuzz.QRatio(str(x['question1']), str(x['question2'])), axis=1)
@@ -37,7 +37,7 @@ def extract_features(df):
     #Procentowe podobieństwo tokenizowanego ciągu znaków
     df['fuzz_token_sort_ratio'] = df.apply(lambda x: fuzz.token_sort_ratio(str(x['question1']), str(x['question2'])), axis=1)
     return df
-#Przypisanie analizowanych wartości do DataFrame'u
+# Przypisanie analizowanych wartości do DataFrame'u
 df = extract_features(data_frame)
 print (df)
 

@@ -51,11 +51,11 @@ Funkcja po tokenizacji i eliminacji zdublowanych wyrazów używa funkcji partial
 <h2>Algorytmy klasyfikacji</h2>
 
 W projekcie użyliśmy następujących algorytmów klasyfikacji z pakietu scikit-learn
-*KNeighborsClassifier
-*DecisionTreeClassifier
-*RandomForestClassifier
-*AdaBoostClassifier
-*GaussianNB
+* KNeighborsClassifier
+* DecisionTreeClassifier
+* RandomForestClassifier
+* AdaBoostClassifier
+* GaussianNB
 
 **KNeighborsClassifier**
 

@@ -4,8 +4,6 @@ import numpy as np
 import pandas as pd 
 from fuzzywuzzy import fuzz
 import time
-from subprocess import check_output
-from sklearn.svm import SVC, NuSVC
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import normalize
 from sklearn.neighbors import KNeighborsClassifier
@@ -17,10 +15,8 @@ import matplotlib.pyplot as plt
 from sklearn import metrics 
 from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score, f1_score, ConfusionMatrixDisplay
 
-print(check_output(["ls", "../input"]).decode("utf8"))
-
 # Poniżej podajemy ścieżkę do dataset
-data_frame = pd.read_csv('../input/train21/train1.csv')
+data_frame = pd.read_csv('train1.csv')
 
 # Analiza pytań
 def extract_features(df):

@@ -100,7 +100,6 @@ for clf in classifiers:
     #  Tworzymy Confusion Matrix
     cm_sk = confusion_matrix(y_test, predicted)
     disp_sk = ConfusionMatrixDisplay(confusion_matrix=cm_sk)
-    # disp_sk("124as")
     
     disp_sk.plot()
     print(clf)
@@ -128,9 +127,11 @@ def make_plot(dataFrame,XGraph, postfix):
                 '{:1.2f}'.format(width), # set variable to display, 2 decimals
                 ha = 'left',   # horizontal alignment
                 va = 'center')  # vertical alignment
-    
-    plt.xlabel( XGraph + ' ' + postfix)
-    plt.title('Classifier '+ XGraph)
+
+    plt.xlabel(XGraph + ' ' + postfix)
+    plt.title('Classifier ' + XGraph)
+    cm_sk_plot_path = XGraph + '_wykres.png'
+    plt.savefig(cm_sk_plot_path, bbox_inches='tight')
     return 0
 
 make_plot(result_frame, 'Accuracy', '%')

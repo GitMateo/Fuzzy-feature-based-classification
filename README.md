@@ -1,11 +1,11 @@
-#Porównanie algorytmów klasyfikacji na zbiorze rozmytym
+<h1>Porównanie algorytmów klasyfikacji na zbiorze rozmytym</hi1>
 
 
-##Wstęp
+<h2>Wstęp</h2>
 
 W tym projekcie głównym celem było dokonanie porównania różnych parametrów związanych z klasyfikacją zbiorów rozmytych. Do jego realizacji wykorzystano zbiór danych “Quora Question Pairs”, język Python oraz bibliotek fuzzywuzzy, seaborn i scikit-learn itp.
 
-Opis zbioru danych
+**Opis zbioru danych**
 
 Zbiorem danych jest zbiór 50 000 rekordów zawierających dwa pytania. Zbiór został stworzony w celu konkursu mającego na celu zidentyfikowanie, czy dwa pytania mają te same znaczenie.
 
@@ -16,7 +16,7 @@ Informacje o atrybutach:
 * is_duplicate - wyznacznik jednoznaczności pytań. Jeżeli równy 1 - pytania mają to samo znaczenie.
 
 
-##Pakiet fuzzywuzzy
+<h2>Pakiet fuzzywuzzy</h2>
 
 Pakiet “fuzzywuzzy” używany jest do porównywania tekstu z użyciem odległości Levenshteina do kalkulacji różnicy pomiędzy sekwencjami tekstu.  Odległością Levenshteina nazywamy najmniejszą liczbą działań prostych, które przetransformują jeden napis na drugi.
 Przykładem jest np. wyraz “orczyk” i “oracz”. Odległość między tymi napisami wynosi 3, ponieważ wymaga dwóch działań usunięcia liter “y’” oraz “k” i wstawienia litery “a”. Przy identycznych napisach odległość wynosi 0.
@@ -48,7 +48,7 @@ Powyższa funkcja działa podobnie do token_sort_ratio. Po tokenizacji i sortowa
 Funkcja po tokenizacji i eliminacji zdublowanych wyrazów używa funkcji partial_ratio zamiast QRatio.
 
 
-##Algorytmy klasyfikacji
+<h2>Algorytmy klasyfikacji</h2>
 
 W projekcie użyliśmy następujących algorytmów klasyfikacji z pakietu scikit-learn
 *KNeighborsClassifier
